@@ -1,0 +1,12 @@
+.tabell {
+    caption {
+        font-weight: bold;
+        text-align: left;
+        padding-bottom: 0.25rem;
+    }
+}
+
+.aktiv {
+    background-color: blanchedalmond;
+    font-weight: bold;
+}

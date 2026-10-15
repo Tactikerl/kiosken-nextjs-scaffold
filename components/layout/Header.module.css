@@ -1,0 +1,41 @@
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: aqua;
+}
+
+.logo {
+    margin: 0;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.meny {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1px;
+
+    a {
+        padding: 1rem;
+        background-color: orange;
+        text-decoration: none;
+    }
+
+    a:hover {
+        background-color: blanchedalmond;
+    }
+
+    :global(.active) {
+        background-color: blanchedalmond;
+    }
+}
+
+.saldo {
+    margin-left: auto;
+    padding: 0.5rem 1rem;
+
+    p {
+        margin: 0;
+    }
+}

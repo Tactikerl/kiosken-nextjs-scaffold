@@ -1,0 +1,19 @@
+/* 8.3 – Responsivt rutenett uten en eneste media query.
+         auto-fill lager så mange kolonner det er plass til, og
+         minmax(12rem, 1fr) sier at hver kolonne skal være minst 12rem
+         bred, og ellers dele plassen likt. På mobil blir det én eller
+         to kolonner, på en stor skjerm fire. */
+.liste {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    /* li er også et grid, så kortet inni strekker seg til full høyde.
+       Da blir alle kortene på samme rad like høye. */
+    li {
+        display: grid;
+    }
+}

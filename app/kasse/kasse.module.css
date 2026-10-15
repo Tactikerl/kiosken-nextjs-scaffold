@@ -1,0 +1,8 @@
+/* 11.2 (fortsatt) – auto-fit og minmax gir to kolonner når det er
+          plass til to på minst 18rem, og ellers én. Ingen media query. */
+.kolonner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}

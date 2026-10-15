@@ -1,0 +1,15 @@
+.betaling {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-top: 1rem;
+
+    p {
+        margin: 0;
+    }
+}
+
+.aBetale {
+    font-size: 1.5rem;
+}

@@ -1,0 +1,23 @@
+.rabatt {
+    --farge: lightgray;
+
+    padding: 0.5rem 1rem;
+    background-color: #f5f5f5;
+    border-left: 0.5rem solid var(--farge);
+
+    p {
+        margin: 0;
+    }
+}
+
+.rabatt[data-niva="Bronse"] {
+    --farge: #cd7f32;
+}
+
+.rabatt[data-niva="Sølv"] {
+    --farge: #a8a9ad;
+}
+
+.rabatt[data-niva="Gull"] {
+    --farge: #d4af37;
+}

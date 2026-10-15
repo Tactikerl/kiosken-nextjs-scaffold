@@ -1,0 +1,16 @@
+.pafyll {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+
+    p {
+        margin: 0;
+    }
+}
+
+.knapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}

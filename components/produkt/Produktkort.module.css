@@ -1,0 +1,105 @@
+/* ============================================================
+   STEG 7 (fortsatt): Produktkortet med CSS Grid
+   ============================================================ */
+
+/* 7.7 – Rutenettet. grid-template-areas tegner kortet som et lite
+         "kart" med navn. Hver linje i teksten er en rad, hvert ord er
+         en kolonne. Står et navn to ganger på samme rad, strekker
+         området seg over begge kolonnene.
+
+           +----------+------+
+           | kategori | pris |
+           +----------+------+
+           |      innhold    |
+           +-----------------+
+           |       navn      |
+           +-----------------+
+           |     knapper     |
+           +-----------------+
+*/
+.kort {
+    --farge: gray;
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto 1fr auto auto;
+    grid-template-areas:
+        "kategori pris"
+        "innhold  innhold"
+        "navn     navn"
+        "knapper  knapper";
+    gap: 0.5rem;
+    min-height: 16rem;
+    padding: 0.75rem;
+    background-color: white;
+    border: 2px solid var(--farge);
+    border-top-width: 0.75rem;
+    border-radius: 0.5rem;
+}
+
+/* 7.8 – Én farge per kategori. [data-kategori="Drikke"] treffer
+         kortene der attributtet har akkurat den verdien. Vi setter
+         bare CSS-variabelen --farge – rammen over bruker den. */
+.kort[data-kategori="Drikke"] {
+    --farge: #1f7a8c;
+}
+
+.kort[data-kategori="Bakst"] {
+    --farge: #b5651d;
+}
+
+.kort[data-kategori="Mat"] {
+    --farge: #2e7d32;
+}
+
+.kort[data-kategori="Snacks"] {
+    --farge: #ad1457;
+}
+
+/* 7.9 – Hvert element plasseres i sitt område med grid-area. */
+.kategori {
+    grid-area: kategori;
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.pris {
+    grid-area: pris;
+    margin: 0;
+    font-weight: bold;
+}
+
+.navn {
+    grid-area: navn;
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.bilde {
+    grid-area: innhold;
+    place-self: center;
+    margin: 0;
+    font-size: 4rem;
+    line-height: 1;
+}
+
+.beskrivelse {
+    grid-area: innhold;
+    align-self: center;
+    margin: 0;
+}
+
+.knapper {
+    grid-area: knapper;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* 7.10 – Baksiden. Samme rutenett, men med en gradient som bakgrunn,
+          så det er tydelig at kortet er snudd. */
+.bakside {
+    background-image: linear-gradient(135deg, blanchedalmond, aqua);
+}

@@ -1,0 +1,15 @@
+.kvittering {
+    max-width: 28rem;
+    padding: 1rem;
+    background-color: blanchedalmond;
+
+    table {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    tfoot th,
+    tfoot td {
+        border-bottom: none;
+    }
+}

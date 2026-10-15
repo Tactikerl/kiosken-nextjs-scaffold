@@ -1,0 +1,14 @@
+.topplinje {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: blanchedalmond;
+
+    p {
+        margin: 0;
+    }
+}
